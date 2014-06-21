@@ -1,0 +1,11 @@
+name = Wysiwyg iFrame
+description = Extends TinyMCE to allow other elements e.g. iframes
+core = 7.x
+dependencies[] = wysiwyg
+
+; Information added by drupal.org packaging script on 2013-02-04
+version = "7.x-1.11-beta8"
+core = "7.x"
+project = "openchurch"
+datestamp = "1359936580"
+
