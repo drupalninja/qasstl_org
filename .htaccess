@@ -57,19 +57,19 @@ DirectoryIndex index.php index.html index.htm
   RewriteEngine on
   
   # if the user visits the qasschoolstl domains - send them to the default school page
-  RewriteCond %{HTTP_HOST} ^(www\.)?qas-school\.com$ [OR]
-  RewriteCond %{HTTP_HOST} ^(www\.)?qasschoolstl\.org$ [OR]
-  RewriteCond %{HTTP_HOST} ^(www\.)?qasschoolstl\.com$ [NC]
+  #RewriteCond %{HTTP_HOST} ^(www\.)?qas-school\.com$ [OR]
+  #RewriteCond %{HTTP_HOST} ^(www\.)?qasschoolstl\.org$ [OR]
+  #RewriteCond %{HTTP_HOST} ^(www\.)?qasschoolstl\.com$ [NC]
   # line below should only match "nothing" just the "homepage"
-  RewriteRule ^/*$ http://qasstl.org/content/queen-all-saints-school [R=301,L,NC]
+  #RewriteRule ^/*$ http://qasstl.org/content/queen-all-saints-school [R=301,L,NC]
 
   #rewrite everything to the qasstl.org domain always
-  RewriteCond %{HTTP_HOST} !^(www\.)?qasstl\.org$ [NC]
-  RewriteRule (.*) http://qasstl.org$1 [R=301,L,NC]
+  #RewriteCond %{HTTP_HOST} !^(www\.)?qasstl\.org$ [NC]
+  #RewriteRule (.*) http://qasstl.org$1 [R=301,L,NC]
         
   #always strip off the www
-  RewriteCond %{HTTP_HOST} ^(www\.)?qasstl\.org$ [NC]
-  RewriteRule (.*) http://qasstl.org/$1 [R=301,L,NC]
+  #RewriteCond %{HTTP_HOST} ^(www\.)?qasstl\.org$ [NC]
+  #RewriteRule (.*) http://qasstl.org/$1 [R=301,L,NC]
 
   # Set "protossl" to "s" if we were accessed via https://.  This is used later
   # if you enable "www." stripping or enforcement, in order to ensure that
