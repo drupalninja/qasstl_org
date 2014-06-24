@@ -1,0 +1,16 @@
+<?php
+/**
+ * @file qasstl_redirect.module
+ */
+
+/**
+ * Implements hook_init().
+ */
+function qasstl_redirect_init() {
+  // Redirect to special page
+  if (drupal_is_front_page()) {
+    if (in_array($_SERVER['HTTP_HOST'], array('qas-school.com', 'qasschoolstl.org', 'qasschoolstl.com'))) {
+      drupal_goto('http://qasstl.org/content/queen-all-saints-school');
+    }
+  }
+}
