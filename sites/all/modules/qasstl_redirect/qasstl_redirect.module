@@ -9,8 +9,10 @@
 function qasstl_redirect_init() {
   // Redirect to special page
   if (drupal_is_front_page()) {
-    if (in_array($_SERVER['HTTP_HOST'], array('qas-school.com', 'qasschoolstl.org', 'qasschoolstl.com'))) {
-      drupal_goto('http://qasstl.org/content/queen-all-saints-school');
+    foreach (array('qas-school.com', 'qasschoolstl.org', 'qasschoolstl.com') as $host_name) {
+      if (strstr($_SERVER['HTTP_HOST'], $host_name)) {
+  	    drupal_goto('http://qasstl.org/content/queen-all-saints-school');
+  	  }
     }
   }
   elseif (substr($_SERVER['HTTP_HOST'], 0, 4) === 'www.') {
